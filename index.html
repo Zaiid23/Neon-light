@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>Neon Light JO</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: radial-gradient(circle at top, #0f0f0f, #050505);
+    color: #fff;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: #000;
+    box-shadow: 0 0 20px #00ffff;
+}
+
+header h1 {
+    color: #00ffff;
+    font-size: 3em;
+    text-shadow: 0 0 10px #00ffff;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #aaa;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.product {
+    background: #111;
+    border-radius: 20px;
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 15px #00ffff44;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px #00ffffaa;
+}
+
+.product .images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: nowrap; /* منع انتقال الصور للسطر الثاني */
+}
+
+.product .images img {
+    width: 48%;
+    border-radius: 10px;
+    object-fit: cover;
+    max-height: 250px;
+    cursor: pointer; /* يظهر أيقونة اليد عند المرور */
+}
+
+.product h3 {
+    color: #ff00ff;
+    margin: 10px 0 10px 0;
+    text-shadow: 0 0 8px #ff00ff;
+}
+
+.price {
+    color: #00ff99;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px #00ff99;
+}
+
+.description {
+    font-size: 0.95em;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    color: #aaa;
+    box-shadow: 0 -5px 20px #00ffff33;
+}
+
+/* Lightbox */
+#lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+@media (max-width: 1000px) {
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+    .product .images img {
+        width: 48%; /* يبقى جنب بعض على الموبايل */
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Neon Light JO</h1>
+    <p>إضاءة نيون رائعة لتزيين غرفتك ✨</p>
+</header>
+
+<section class="products">
+
+    <!-- منتج 1 -->
+    <div class="product">
+        <div class="images">
+            <img src="image1a.jpg" alt="منتج 1 صورة 1">
+            <img src="image2a.jpg" alt="منتج 1 صورة 2">
+        </div>
+        <h3>إضائة نيون فايس سيتي </h3>
+        <div class="price"> بسعر 20 دينار </div>
+        <div class="description">مصباح نيون فايس سيتي - مصباح ليلي جداري يعمل بمنفذ USB، مزين بكتابة يدوية، وإضاءة زرقاء ووردية ، مثالي لغرف الألعاب ، والديكور المنزلي، مصنوع من البلاستيك، تحكم بالزر، لا يحتاج إلى بطارية، إضاءة غرف الألعاب تصميم عصري.</div>
+    </div>
+
+    <!-- منتج 2 -->
+    <div class="product">
+        <div class="images">
+            <img src="image3a.jpg" alt="منتج 2 صورة 1">
+            <img src="image4a.jpg" alt="منتج 2 صورة 2">
+        </div>
+        <h3>لوحة مضيئة على شكل علامة الدولار
+</h3>
+        <div class="price">بسعر 20 دينار</div>
+        <div class="description">تصميم علوحة نيون مضيئة على شكل علامة الدولار مع جيب للنقود - تعمل بمنفذ USB، تُثبت على الحائط، - لون واحد - مصباح بلاستيكي على شكل علامة الدولار 
+.</div>
+    </div>
+
+    <!-- منتج 3 -->
+    <div class="product">
+        <div class="images">
+            <img src="image5a.jpg" alt="منتج 3 صورة 1">
+            <img src="image6a.jpg" alt="منتج 3 صورة 2">
+        </div>
+        <h3>إضائة mpower
+</h3>
+        <div class="price">40 دينار</div>
+        <div class="description">لوحة نيون مضيئة بشعار LED  لوحة جدارية مضيئة بإضاءة LED ديكور رياضي مستوحى من عالم السيارات - لوحة نيون بشعار M</div>
+    </div>
+
+</section>
+
+<footer>
+    © 2025 Neon Light JO
+</footer>
+
+<!-- Lightbox -->
+<div id="lightbox">
+    <img src="" alt="تكبير الصورة">
+</div>
+
+<script>
+// اختيار كل الصور
+const images = document.querySelectorAll('.product .images img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox.querySelector('img');
+
+images.forEach(img => {
+    img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+    });
+});
+
+lightbox.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+});
+</script>
+
+</body>
+</html>
